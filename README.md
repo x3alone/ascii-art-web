@@ -1,5 +1,7 @@
-duh this is the base project branch, ofc it has nothing cool.. 
-go check dockerize is the final product
+Duh, obviously this is the base branch! Of course, it’s totally boring. 
+Go check out the *Dockerize* branch for the final product, the big kahuna!
+
+
 
 ```
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
