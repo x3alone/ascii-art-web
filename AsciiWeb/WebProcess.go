@@ -3,29 +3,31 @@ package web
 import (
 	"fmt"
 	"net/http"
+	"strings"
 )
 
 /* the function that handles the printing of the specified banner*/
 func fs_art(str, banner string) (string, error) {
 	if check_input(str) {
-		return "", fmt.Errorf("non supported charachters")
+		return "", fmt.Errorf("400")
 	}
+
+	if len(str)-strings.Count(str, "\n") > 250 {
+		return "", fmt.Errorf("400")
+	}
+
 	new_lines, trigger := check_newline(str)
 	if trigger {
-
 		return new_lines, nil
 	}
-	if banner == "standard" || banner == "thinkertoy" || banner == "shadow" {
 
-		data := read_file(banner + ".txt")
-
-		shape := array_2d(data)
-
-		result := print_shapes(shape, str)
-
-		return result, nil
+	if banner != "standard" && banner != "thinkertoy" && banner != "shadow" {
+		return "", fmt.Errorf("400")
 	}
-	return "", fmt.Errorf("wrong banner")
+	data := read_file(banner + ".txt")
+	shape := array_2d(data)
+	result := print_shapes(shape, str)
+	return result, nil
 }
 
 func Collect_info(req *http.Request) (string, error) {
@@ -34,8 +36,7 @@ func Collect_info(req *http.Request) (string, error) {
 	data, err := fs_art(args[0], args[1])
 
 	if err != nil {
-		return "", fmt.Errorf("500")
-	} else {
-		return data, err
+		return "", fmt.Errorf("400")
 	}
+	return data, err
 }

@@ -7,7 +7,7 @@ import (
 
 /* reads the specified file from the banner*/
 func read_file(file string) []string {
-	data, _ := os.ReadFile("AsciiWeb/" + file)
+	data, _ := os.ReadFile("AsciiWeb/static/" + file)
 	if file == "thinkertoy.txt" {
 		data = []byte(strings.ReplaceAll(string(data), "\r", ""))
 	}
@@ -34,7 +34,7 @@ func print_shapes(shape [][]string, str string) string {
 	var result string
 	str = strings.ReplaceAll(str, "\n", "\n")
 	str = strings.ReplaceAll(str, "\r\n", "\n")
-	 if strings.Contains(str, "\n") {
+	if strings.Contains(str, "\n") {
 		new = strings.Split(str, "\n")
 	} else {
 		new = append(new, str)
@@ -88,7 +88,7 @@ func check_newline(str string) (string, bool) {
 	str = strings.ReplaceAll(str, "\\n", "\n")
 	if len(str) == 0 {
 		return "", true
-	} else if len(str) == 1 && str[0] == '\n' {
+	} else if len(str) == 1 && str == "\n" {
 		return "\n", true
 	} else if all_newline(str) {
 		for i := 0; len(str) > i; i++ {
