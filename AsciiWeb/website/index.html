@@ -9,16 +9,25 @@
 </head>
 
 <body>
-  <h1 class="c">Ascii-Art-Web</h1>
-  <form action="/ascii-art" method="POST">
-    <textarea name="input" placeholder="TYPE SOMETHING.." maxlength="250" required></textarea>
-    <div class="choose">
-      <label><input type="radio" name="banners" value="standard" checked>standard</label>
-      <label><input type="radio" name="banners" value="shadow">shadow</label>
-      <label><input type="radio" name="banners" value="thinkertoy">thinkertoy</label>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
+  <center>
+    <h1 class="c">Ascii-Art-Web</h1>
+    <form action="/ascii-art" method="POST">
+      <textarea name="input" maxlength="250" required></textarea>
+        <div class="choose">
+            <input type="radio" id="standard" name="banners" value="standard" checked>
+            <label for="standard">Standard</label>
+            
+            <input type="radio" id="shadow" name="banners" value="shadow">
+            <label for="shadow">Shadow</label>
+            
+            <input type="radio" id="thinkertoy" name="banners" value="thinkertoy">
+            <label for="thinkertoy">Thinkertoy</label>
+        </div>
+        <center>
+      <button type="submit">Submit</button>
+        </center>
+    </form>
+  </center>
 </body>
 
 </html>

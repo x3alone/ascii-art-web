@@ -1,22 +1,32 @@
-body {
-    font-family: Nimbus Mono PS, Courier New;
-    font-weight: 30;
-    background-color: #62c3de;
+@import url('https://fonts.cdnfonts.com/css/public-pixel');
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public Pixel', sans-serif;
+    font-weight: 150;
+    color: white;
+    background-image: url("/ascii/img/galaxy.gif");
+    height: 70vh;
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
 .nav {
-    background-color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.322);
     padding: 10px;
     text-align: center;
 }
 
-.nav a {
-    font-size: 50px;
-    text-shadow: 0 0 4px #000000;
-    color: #ffffff;
-    margin: 0 10px;
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
 }
 
 .contain {
@@ -26,6 +36,7 @@ body {
     top: 90px;
 }
 
+
 @media (max-width: 450px) {
     .nav a {
         font-size: 30px;
@@ -33,5 +44,6 @@ body {
 
     .contain pre {
         font-size: 8px;
+        align-content: left;
     }
 }
