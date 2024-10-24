@@ -1,4 +1,4 @@
-duh this is the basic broject branch, ofc it has nothing cool.. 
+duh this is the base project branch, ofc it has nothing cool.. 
 go check dockerize is the final product
 
 ```
